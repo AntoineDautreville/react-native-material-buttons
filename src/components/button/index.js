@@ -72,7 +72,7 @@ export default class Button extends PureComponent {
 
       Animated
         .timing(disableAnimation, { 
-          useNativeDriver: true,
+          useNativeDriver: false,
           toValue: disabled? 1 : 0, 
           duration 
         })
@@ -97,7 +97,7 @@ export default class Button extends PureComponent {
         toValue: focused? 1 : 0,
         duration: focusAnimationDuration,
         easing: Easing.out(Easing.ease),
-        useNativeDriver: true
+        useNativeDriver: false
       })
       .start();
   }
